@@ -25,9 +25,11 @@ git config --global user.name "NOME DO USUARIO NO GITHUB"
 git config --global user.email "EMAIL DA CONTA DO GITHUB"
 ```
 ## Histórias de Usuários
-  -
-  -
-  -
+  - Transferir dados de funcionalidades de um sistema pro o outro, para melhorar o desempenho das operações
+  - Oferecer uma melhor experiência no atendimento aos clientes
+  - Monitorar e gerir os fluxos de entrada e saída de mercadorias de uma empresa para um bom funcionamento das operações
+  - Desenvolver um sistema de venda e implementar uma interface com todos os detalhes do produto
+  - Armazenar cópias de arquivos, aplicações, bancos de dados e serviços em servidores remotos
 
 ### Commit e Push
 

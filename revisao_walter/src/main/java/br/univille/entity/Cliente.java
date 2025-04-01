@@ -1,4 +1,4 @@
-package br.univille;
+package br.univille.entity;
 
 public class Cliente {
     //variável - atributo

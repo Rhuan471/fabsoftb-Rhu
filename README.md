@@ -30,7 +30,11 @@ git config --global user.email "EMAIL DA CONTA DO GITHUB"
   - Monitorar e gerir os fluxos de entrada e saída de mercadorias de uma empresa para um bom funcionamento das operações
   - Desenvolver um sistema de venda e implementar uma interface com todos os detalhes do produto
   - Armazenar cópias de arquivos, aplicações, bancos de dados e serviços em servidores remotos
-
+  - Como um farmacêutico, eu quero consultar o histórico de medicamentos de um paciente para ter um panorama completo do seu tratamento e evitar interações medicamentosas
+  - Como um gerente de estoque, eu quero receber alertas automáticos quando um produto estiver com baixo estoque para poder realizar a compra antes que falte e prejudique as vendas
+  - Como um operador de caixa, eu quero aplicar descontos promocionais e convênios de forma rápida e fácil no momento da venda para agilizar o atendimento ao cliente
+  - Como um cliente, eu quero poder pesquisar a disponibilidade de um medicamento específico (por nome, princípio ativo ou código de barras) para saber se a farmácia o possui antes de me deslocar
+  - Como um administrador, eu quero gerar relatórios de vendas por período, produto e forma de pagamento para analisar o desempenho da farmácia e tomar decisões estratégicas
 ### Commit e Push
 
 ```

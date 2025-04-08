@@ -35,6 +35,7 @@ git config --global user.email "EMAIL DA CONTA DO GITHUB"
   - Como um operador de caixa, eu quero aplicar descontos promocionais e convênios de forma rápida e fácil no momento da venda para agilizar o atendimento ao cliente
   - Como um cliente, eu quero poder pesquisar a disponibilidade de um medicamento específico (por nome, princípio ativo ou código de barras) para saber se a farmácia o possui antes de me deslocar
   - Como um administrador, eu quero gerar relatórios de vendas por período, produto e forma de pagamento para analisar o desempenho da farmácia e tomar decisões estratégicas
+
 ### Commit e Push
 
 ```

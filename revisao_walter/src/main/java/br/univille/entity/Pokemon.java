@@ -1,6 +1,5 @@
 package br.univille.entity;
 
-public package br.univille.entity;
 
 public class Pokemon {
     private String nome;

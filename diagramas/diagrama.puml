@@ -1,0 +1,48 @@
+@startuml
+package br.univille.projrhuan.entity {
+    class Farmaceutico {
+        - Long id
+        - String nome
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class GerenteEstoque {
+        - Long id
+        - String nome
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class OperadorCaixa {
+        - Long id
+        - String nome
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class Cliente {
+        - Long id
+        - String nome
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class Administrador {
+        - Long id
+        - String nome
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+}
+@enduml

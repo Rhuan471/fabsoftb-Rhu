@@ -1,7 +1,7 @@
 package br.univille.projrhuan.entity;
 
 public class Administrador {
-    private Long id;
+    private long id;
     private String nome;
 
     public Long getId() {

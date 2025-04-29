@@ -3,6 +3,24 @@ package br.univille.projrhuan.entity;
 public class GerenteEstoque {
     private Long id;
     private String nome;
+    private String endereco;
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
+    }
+
+    private int telefone;
 
     public Long getId() {
         return id;

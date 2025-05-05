@@ -1,40 +1,45 @@
 package br.univille.projrhuan.entity;
-
 public class GerenteEstoque {
-    private Long id;
     private String nome;
-    private String endereco;
-    public String getEndereco() {
-        return endereco;
+    private String identificacao;
+    private Administrador administradorResponsavel;
+
+    public GerenteEstoque(String nome, String identificacao) {
+        this.nome = nome;
+        this.identificacao = identificacao;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public int getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
-
-    private int telefone;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    // Getters e Setters
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getIdentificacao() {
+        return identificacao;
+    }
+
+    public void setIdentificacao(String identificacao) {
+        this.identificacao = identificacao;
+    }
+
+    public Administrador getAdministradorResponsavel() {
+        return administradorResponsavel;
+    }
+
+    public void setAdministradorResponsavel(Administrador administradorResponsavel) {
+        this.administradorResponsavel = administradorResponsavel;
+    }
+
+    @Override
+    public String toString() {
+        return "GerenteDeEstoque{" +
+            "nome='" + nome + '\'' +
+            ", identificacao='" + identificacao + '\'' +
+            (administradorResponsavel != null ? ", administradorResponsavel=" + administradorResponsavel.getNome() : "") +
+            '}';
     }
 }

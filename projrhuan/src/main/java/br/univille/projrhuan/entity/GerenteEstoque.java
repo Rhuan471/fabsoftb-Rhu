@@ -4,16 +4,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
 public class GerenteEstoque {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nome;
     private String identificacao;
+
     @ManyToOne
+    @JoinColumn(name = "administrador_id")
     private Administrador administradorResponsavel;
 
     public GerenteEstoque(String nome, String identificacao) {
@@ -21,7 +25,15 @@ public class GerenteEstoque {
         this.identificacao = identificacao;
     }
 
-    // Getters e Setters
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }

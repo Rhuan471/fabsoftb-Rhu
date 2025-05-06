@@ -1,17 +1,45 @@
 package br.univille.projrhuan.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+
+@Entity
 public class Administrador {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
     private String registro;
+    @OneToMany(cascade={CascadeType.MERGE,CascadeType.REFRESH})
+    @JoinColumn(name="admininstrador_id")
     private List<OperadorCaixa> operadoresSupervisionados;
     public List<OperadorCaixa> getOperadoresSupervisionados() {
         return operadoresSupervisionados;
     }
+        @OneToMany(cascade={CascadeType.MERGE,CascadeType.REFRESH})
+        @JoinColumn(name="admininstrador_id")
+        private List<Farmaceutico> farmaceuticoSupervisionados = new ArrayList<>();
+    
+        public List<Farmaceutico> getFarmaceuticoSupervisionados() {
+            return farmaceuticoSupervisionados;
+        }
 
+        public void setFarmaceuticoSupervisionados(List<Farmaceutico> farmaceuticoSupervisionados) {
+            this.farmaceuticoSupervisionados = farmaceuticoSupervisionados;
+        }
 
+        public void adicionarFarmaceuticoSupervisionado(Farmaceutico farmaceutico) {
+            farmaceuticoSupervisionados.add(farmaceutico);
+        }
+    
     public void setOperadoresSupervisionados(List<OperadorCaixa> operadoresSupervisionados) {
         this.operadoresSupervisionados = operadoresSupervisionados;
     }
@@ -92,7 +120,6 @@ public class Administrador {
 
 
     public void adicionarOperadorSupervisionado(OperadorCaixa operador1) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'adicionarOperadorSupervisionado'");
     }
 

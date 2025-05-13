@@ -9,15 +9,30 @@ import jakarta.persistence.Id;
 public class OperadorCaixa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // Corrected primary key
+
     private String nome;
     private String matricula;
 
+    // Default constructor (required by JPA)
+    public OperadorCaixa() {
+    }
+
+    // Parameterized constructor
     public OperadorCaixa(String nome, String matricula) {
         this.nome = nome;
         this.matricula = matricula;
     }
 
-    // Getters e Setters
+    // Getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -34,22 +49,11 @@ public class OperadorCaixa {
         this.matricula = matricula;
     }
 
-    public void adicionarOperadorSupervisionado(Object operador) {
-        if (operador instanceof Farmaceutico || operador instanceof OperadorCaixa) {
-            // Adiciona o operador à lista de operadores supervisionados
-            // (implementação não mostrada aqui, pois não há lista definida na classe)
-        } else if (operador instanceof GerenteEstoque) {
-            // Adiciona o gerente de estoque à lista de operadores supervisionados
-            // (implementação não mostrada aqui, pois não há lista definida na classe)
-        } else {
-            throw new IllegalArgumentException("Operador deve ser Farmaceutico ou OperadorCaixa");
-        }
-    }
-
     @Override
     public String toString() {
-        return "OperadorDeCaixa{" +
-            "nome='" + nome + '\'' +
+        return "OperadorCaixa{" +
+            "id=" + id +
+            ", nome='" + nome + '\'' +
             ", matricula='" + matricula + '\'' +
             '}';
     }

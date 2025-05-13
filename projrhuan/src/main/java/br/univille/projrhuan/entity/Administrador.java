@@ -66,6 +66,8 @@ public class Administrador {
         this.gerenteDeEstoqueSupervisionado = gerenteDeEstoqueSupervisionado;
     }
 
+    @OneToMany(cascade={CascadeType.MERGE,CascadeType.REFRESH})
+    @JoinColumn(name="admininstrador_id")
     private List<Farmaceutico> farmaceuticosSupervisionados;
     private GerenteEstoque gerenteDeEstoqueSupervisionado;
     public String getRegistro() {

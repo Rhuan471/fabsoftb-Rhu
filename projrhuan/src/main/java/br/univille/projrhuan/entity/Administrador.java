@@ -45,6 +45,8 @@ public class Administrador {
     }
 
 
+    @OneToMany(cascade={CascadeType.MERGE,CascadeType.REFRESH})
+    @JoinColumn(name="admininstrador_id")
     public List<Farmaceutico> getFarmaceuticosSupervisionados() {
         return farmaceuticosSupervisionados;
     }

@@ -97,4 +97,24 @@ public class Administrador {
             (gerenteDeEstoqueSupervisionado != null ? ", gerenteDeEstoqueSupervisionado=" + gerenteDeEstoqueSupervisionado.getNome() : "") +
             '}';
     }
+
+    public Object getEndereco() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getEndereco'");
+    }
+
+    public void setEndereco(Object endereco) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setEndereco'");
+    }
+
+    public Object getDataNascimento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDataNascimento'");
+    }
+
+    public void setDataNascimento(Object dataNascimento) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDataNascimento'");
+    }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.univille.projrhuan.entity.Farmaceutico;
 
 @Repository
-public interface FarmaceuticoRepository extends JpaRepository<Farmaceutico,String>{
+public interface FarmaceuticoRepository extends JpaRepository<Farmaceutico, Long> {
     
     public interface FarmaceuticoRepositorio {
         Optional<Farmaceutico> buscarPorId(Long id);

@@ -10,7 +10,4 @@ public interface GerenteEstoqueService {
     GerenteEstoque getById(Long id);
     GerenteEstoque delete(Long id);
 
-        void save(Object GerenteEstoqueAntigo);
-    Object getById(long id);
-    void delete(long id);
 }

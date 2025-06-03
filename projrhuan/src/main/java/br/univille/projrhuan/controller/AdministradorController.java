@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projrhuan.entity.Administrador;
-import br.univille.projrhuan.entity.Cliente;
 @RestController
 @RequestMapping("/api/v1/clientes")
 public class AdministradorController {
@@ -73,7 +72,7 @@ public class AdministradorController {
         }
         service.delete(id);
 
-        return new ResponseEntity<Cliente>(clienteExcluido,
+        return new ResponseEntity<Administrador>(clienteExcluido,
                 HttpStatus.OK);
     }
 }

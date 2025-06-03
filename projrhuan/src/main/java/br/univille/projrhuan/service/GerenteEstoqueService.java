@@ -1,4 +1,4 @@
-package br.univille.projrhuan.service.impl;
+package br.univille.projrhuan.service;
 
 import java.util.List;
 

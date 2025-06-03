@@ -1,18 +1,13 @@
-package br.univille.projrhuan.service.impl;
+package br.univille.projrhuan.service;
 
 import java.util.List;
 
 import br.univille.projrhuan.entity.OperadorCaixa;
 
 public interface OperadorCaixaService {
-            OperadorCaixa save(OperadorCaixa operadorCaixa);
+    OperadorCaixa save(OperadorCaixa operadorCaixa);
     List<OperadorCaixa> getAll();
     OperadorCaixa getById(Long id);
     OperadorCaixa delete(Long id);
 
-        void save(Object OperadorCaixaAntigo);
-
-    Object getById(long id);
-
-    void delete(long id);
 }

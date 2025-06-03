@@ -10,10 +10,4 @@ public interface AdministradorService {
     Administrador getById(Long id);
     Administrador delete(Long id);
 
-    void save(Object AdministradorAntigo);
-
-    Object getById(long id);
-
-    void delete(long id);
-
 }

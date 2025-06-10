@@ -8,6 +8,5 @@ public interface OperadorCaixaService {
             OperadorCaixa save(OperadorCaixa operadorCaixa);
     List<OperadorCaixa> getAll();
     OperadorCaixa getById(Long id);
-    OperadorCaixa delete(Long id);
 
 }

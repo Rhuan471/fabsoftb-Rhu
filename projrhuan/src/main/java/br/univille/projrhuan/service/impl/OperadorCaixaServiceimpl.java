@@ -31,12 +31,4 @@ public class OperadorCaixaServiceimpl implements OperadorCaixaService {
             return retorno.get();
         return null;
     }
-
-    @Override
-    public OperadorCaixa delete(Long id) {
-        var operadorCaixa = getById(id);
-        if (operadorCaixa != null)
-            OperadorCaixaRepository.deleteById(id);
-        return operadorCaixa;
-    }
 }

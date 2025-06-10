@@ -57,4 +57,44 @@ public class OperadorCaixa {
             ", matricula='" + matricula + '\'' +
             '}';
     }
+
+    public Object getEndereco() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getEndereco'");
+    }
+
+    public void setEndereco(Object endereco) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setEndereco'");
+    }
+
+    public Object getTelefone() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getTelefone'");
+    }
+
+    public void setTelefone(Object telefone) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTelefone'");
+    }
+
+    public Object getDataNascimento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDataNascimento'");
+    }
+
+    public void setDataNascimento(Object dataNascimento) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDataNascimento'");
+    }
+
+    public Object getSalario() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSalario'");
+    }
+
+    public void setSalario(Object salario) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+    }
 }

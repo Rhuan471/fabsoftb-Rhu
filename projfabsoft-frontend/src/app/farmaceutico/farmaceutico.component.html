@@ -1,1 +1,21 @@
-<p>farmaceutico works!</p>
+<main class="container">
+    <h2>Farmaceutico</h2>
+
+    <a routerLink="/Farmaceutico/novo">Novo</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>cpf</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umFarmaceutico of listaFarmaceuticos">
+                <td>{{umFarmaceutico.nome}}</td>
+                <td>{{umFarmaceutico.cpf}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>

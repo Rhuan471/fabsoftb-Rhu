@@ -1,3 +1,6 @@
+import { Routes } from '@angular/router';
+import { FarmaceuticoComponent } from '../farmaceutico/farmaceutico.component';
+import { FormFarmaceuticoComponent } from './form-farmaceutico.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,7 +8,8 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './form-farmaceutico.component.html',
   styleUrl: './form-farmaceutico.component.css'
-})
-export class FormFarmaceuticoComponent {
-
-}
+});
+export const routes: Routes = [
+  { path: 'farmaceutico', component: FarmaceuticoComponent },
+  { path: 'farmaceutico/form', component: FormFarmaceuticoComponent },
+];

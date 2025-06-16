@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './form-administrador.component.html',
   styleUrl: './form-administrador.component.css'
-})
+});
 export class FormAdministradorComponent {
 
 }

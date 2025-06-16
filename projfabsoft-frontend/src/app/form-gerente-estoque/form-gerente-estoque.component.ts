@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './form-gerente-estoque.component.html',
   styleUrl: './form-gerente-estoque.component.css'
-})
+});
 export class FormGerenteEstoqueComponent {
 
 }

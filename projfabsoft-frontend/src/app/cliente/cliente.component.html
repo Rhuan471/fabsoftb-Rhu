@@ -11,6 +11,7 @@
                 <th>Telefone</th>
                 <th>E-mail</th>
                 <th>Data Nascimento</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,9 @@
                 <td>{{umCliente.telefone}}</td>
                 <td>{{umCliente.email}}</td>
                 <td>{{umCliente.dataNascimento}}</td>
+
+                <th><a (click)="alterar(umCliente)"
+                class="btn btn btn-secondary">Alterar</a></th>
             </tr>
         </tbody>
 

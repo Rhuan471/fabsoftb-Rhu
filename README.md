@@ -1,5 +1,17 @@
 # Fábrica de Software 2025/1
 
+# INICIO DA AULA
+1) RODAR O SPRINGBOOT DASHBOARD
+2) ABRIR O TERMINAL, DIGITAR
+
+cd projfabsoft-frontend
+
+3) DIGITAR
+
+ng serve
+
+
+
 ## Propostas de projeto
 
 - Sistema de Gerenciamento de Farmácias e Drograria

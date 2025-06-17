@@ -1,1 +1,15 @@
-<p>form-administrador works!</p>
+<main class="container">
+    <h2>Administrador</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input type="text"
+                [(ngModel)]="Administrador.nome"
+                class="form-control"
+                id="txtNome">
+            </div>
+        </div>
+        <button (click)="salvar()"
+        class="btn btn-primary">Salvar</button>
+</main>

@@ -1,1 +1,26 @@
-<p>gerente-estoque works!</p>
+<main class="container">
+    <h2>Gerente</h2>
+
+    <a routerLink="/Gerente/novo">Novo</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Identificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umGerenteEstoque of listaGerenteEstoques">
+                <td>{{umGerenteEstoque.nome}}</td>
+                <td>{{umGerenteEstoqueIdentificacao}}</td>
+                <td>
+                    <button (click)="editar(umCliente.id)"
+                            class="btn btn-warning">Editar</button>
+                    <button (click)="excluir(umCliente.id)"
+                            class="btn btn-danger">Excluir</button>
+            </tr>
+        </tbody>
+
+    </table>
+</main>

@@ -12,6 +12,10 @@ import { Router } from '@angular/router';
   styleUrl: './cliente.component.css',
   providers: [ClienteService, Router]
 })
+
+  providers: [ClienteService]
+});
+
 export class ClienteComponent {
     listaClientes: Cliente[] = [];
 
@@ -19,6 +23,10 @@ export class ClienteComponent {
       private clienteService: ClienteService,
       private router:Router
     ) {}
+
+    novo() {
+      this.router.navigate(['clientes/novo']);
+    }
 
     ngOnInit(){
       console.log("Carregando clientes...");

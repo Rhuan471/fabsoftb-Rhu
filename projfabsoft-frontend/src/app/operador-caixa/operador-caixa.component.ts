@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { OperadorCaixa } from '../model/OperadorCaixa';
-import { OperadorCaixaService } from '../service/OperadorCaixa.service';
+// Update the import path and filename to match the actual file, e.g.:
+import { OperadorCaixaService } from '../service/operador-caixa.service';
 
 @Component({
   selector: 'app-operador-caixa',
@@ -15,13 +16,13 @@ import { OperadorCaixaService } from '../service/OperadorCaixa.service';
 export class OperadorCaixaComponent {
   operadoresCaixa: OperadorCaixa[] = [];
 
-  constructor(private operadorCaixaService: OperadorCaixaService) {
+  constructor(@Inject(OperadorCaixaService) private operadorCaixaService: OperadorCaixaService) {
     this.listarOperadoresCaixa();
   }
 
   listarOperadoresCaixa() {
     this.operadorCaixaService.getOperadoresCaixa()
-      .subscribe(operadores => {
+      .subscribe((operadores: OperadorCaixa[]) => {
         this.operadoresCaixa = operadores;
       });
   }

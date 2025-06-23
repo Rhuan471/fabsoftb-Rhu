@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GerenteEstoque } from '../model/GerenteEstoque';
-import { GerenteEstoqueService } from '../service/GerenteEstoque.service';
+// Update the import path and filename to match the actual file location and name
+import { GerenteEstoqueService } from '../service/gerente-estoque.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -21,7 +22,7 @@ export class GerenteEstoqueComponent {
 
   listarGerentesEstoque() {
     this.gerenteEstoqueService.getGerentesEstoque()
-      .subscribe(gerentes => {
+      .subscribe((gerentes: GerenteEstoque[]) => {
         this.gerentesEstoque = gerentes;
       });
   }

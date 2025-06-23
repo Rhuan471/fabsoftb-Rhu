@@ -1,7 +1,7 @@
 <main class="container">
-    <h2>Clientes</h2>
+    <h2>Operadores</h2>
 
-    <a routerLink="/clientes/novo">Novo</a>
+    <a routerLink="/Operadoresnovo">Novo</a>
 
     <table class="table">
         <thead>
@@ -11,8 +11,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let umOperadorCaixa of listaOperadoresCaixa">
-                <td>{{umCliente.nome}}</td>
+            <tr *ngFor="let umOperadorCaixa of listarOperadoresCaixa">
+                <td>{{umOperadorCaixa.nome}}</td>
                 <td>{{umOperadorCaixa.matricula}}</td>
             </tr>
         </tbody>

@@ -12,7 +12,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   templateUrl: './form-cliente.component.html',
   styleUrl: './form-cliente.component.css',
   providers: [ClienteService, Router]
-});
+})
+
 export class FormClienteComponent {
     cliente: Cliente = new Cliente();
 

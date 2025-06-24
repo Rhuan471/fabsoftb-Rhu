@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
-import { Farmaceutico } from '../model/Farmaceutico';
-import { FarmaceuticoService } from '../service/Farmaceutico.service';
+import { Farmaceutico } from '../model/farmaceutico';
+import { FarmaceuticoService } from '../service/farmaceutico.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ export class FormFarmaceuticoComponent {
   ) {}
   salvar() {
     this.farmaceuticoService.saveFarmaceutico(this.farmaceutico)
-      .subscribe(resultado => {
+      .subscribe((resultado: any) => {
         this.router.navigate(['farmaceuticos']);
       });
   }

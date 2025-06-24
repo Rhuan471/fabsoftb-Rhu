@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
-import { GerenteEstoque } from '../model/GerenteEstoque';
-import { GerenteEstoqueService } from '../service/GerenteEstoque.service';
+import { GerenteEstoque } from '../model/gerente-estoque';
+import { GerenteEstoqueService } from '../service/gerente-estoque.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   providers: [GerenteEstoqueService, Router]
 })
 export class FormGerenteEstoqueComponent {
-  gerenteEstoque: GerenteEstoque = new GerenteEstoque();
+  gerenteEstoque: GerenteEstoque = {} as GerenteEstoque;
 
   constructor(
     private gerenteEstoqueService: GerenteEstoqueService,
@@ -25,7 +25,7 @@ export class FormGerenteEstoqueComponent {
 
   salvar() {
     this.gerenteEstoqueService.saveGerenteEstoque(this.gerenteEstoque)
-      .subscribe(resultado => {
+      .subscribe((resultado: any) => {
         this.router.navigate(['gerentes-estoque']);
       });
   }

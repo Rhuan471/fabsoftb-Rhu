@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
-import { OperadorCaixa } from '../model/OperadorCaixa';
-import { OperadorCaixaService } from '../service/OperadorCaixa.service';
+import { OperadorCaixa } from '../model/operador-caixa';
+import { OperadorCaixaService } from '../service/operador-caixa.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

@@ -1,4 +1,4 @@
-export interface GerenteEstoque {
+export class GerenteEstoque {
   id: number;
   nome: string;
   identificação: String;

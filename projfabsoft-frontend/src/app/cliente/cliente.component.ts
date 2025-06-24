@@ -13,9 +13,6 @@ import { Router } from '@angular/router';
   providers: [ClienteService, Router]
 })
 
-  providers: [ClienteService]
-});
-
 export class ClienteComponent {
     listaClientes: Cliente[] = [];
 

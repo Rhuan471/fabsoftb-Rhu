@@ -1,1 +1,23 @@
-<p>administrador works!</p>
+<main class="container">
+    <h2>Administrador</h2>
+
+    <a routerLink="/Administrador/novo">Novo</a>
+    <table class="table">
+        <thead>
+            <tr>   
+                <th>Nome</th>
+                <th>Registro</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umAdminstrador of listaAdministrador">
+                <td>{{umAdminstrador.nome}}</td>
+                <td>{{umAdminstrador.Registro}}</td>
+                <th><a (click)="alterar(umCAdminstrador)"
+                class="btn btn btn-secondary">Alterar</a></th>
+            </tr>
+        </tbody>
+
+    </table>
+</main>

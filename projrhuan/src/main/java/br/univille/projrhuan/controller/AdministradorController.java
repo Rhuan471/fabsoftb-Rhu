@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projrhuan.entity.Administrador;
 @RestController
-@RequestMapping("/api/v1/clientes")
+@RequestMapping("/api/v1/administrador")
 public class AdministradorController {
 
     @Autowired

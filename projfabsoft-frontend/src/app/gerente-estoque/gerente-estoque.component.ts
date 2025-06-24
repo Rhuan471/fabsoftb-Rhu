@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { GerenteEstoque } from '../model/GerenteEstoque';
-// Update the import path and filename to match the actual file location and name
+import { GerenteEstoque } from '../model/gerente-estoque';
 import { GerenteEstoqueService } from '../service/gerente-estoque.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';

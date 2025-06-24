@@ -20,7 +20,7 @@ export class GerenteEstoqueComponent {
   }
 
   listarGerentesEstoque() {
-    this.gerenteEstoqueService.getGerentesEstoque()
+    this.gerenteEstoqueService.getGerenteEstoque()
       .subscribe((gerentes: GerenteEstoque[]) => {
         this.gerentesEstoque = gerentes;
       });

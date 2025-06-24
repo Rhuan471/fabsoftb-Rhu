@@ -4,12 +4,15 @@ import { Observable } from 'rxjs';
 import { GerenteEstoque } from '../model/gerente-estoque';
 
 export class GerenteEstoqueService {
+  getGerenteEstoque() {
+    return this.http.get<GerenteEstoque[]>(this.apiURL);
+  }
   apiURL = "http://localhost:8080/api/v1/gerente-estoque";
   
   constructor(private http:HttpClient) { }
 
   getGerentes(){
-    return this.http.get<GerenteEstoque[]>(this.apiURL);
+
   }
 
   saveGerenteEstoque(GerenteEstoque:GerenteEstoque){
@@ -23,3 +26,4 @@ export class GerenteEstoqueService {
     return this.http.get<GerenteEstoque>(`${this.apiURL}/${id}`);
   }
 }
+

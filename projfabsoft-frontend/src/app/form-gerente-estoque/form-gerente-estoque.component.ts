@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   templateUrl: './form-gerente-estoque.component.html',
   styleUrl: './form-gerente-estoque.component.css',
   providers: [GerenteEstoqueService, Router]
-});
+})
 export class FormGerenteEstoqueComponent {
   gerenteEstoque: GerenteEstoque = new GerenteEstoque();
 

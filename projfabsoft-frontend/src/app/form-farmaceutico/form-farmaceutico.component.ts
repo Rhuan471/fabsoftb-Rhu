@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './form-farmaceutico.component.html',
   styleUrl: './form-farmaceutico.component.css',
   providers: [FarmaceuticoService, Router]
-});
+})
 export class FormFarmaceuticoComponent {
   farmaceutico: Farmaceutico = new Farmaceutico();
   constructor(
@@ -26,6 +26,5 @@ export class FormFarmaceuticoComponent {
         this.router.navigate(['farmaceuticos']);
       });
   }
-//  { path: 'farmaceutico', component: FarmaceuticoComponent },
-//  { path: 'farmaceutico/form', component: FormFarmaceuticoComponent },
+
 }

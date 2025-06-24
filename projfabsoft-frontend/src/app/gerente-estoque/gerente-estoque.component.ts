@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './gerente-estoque.component.html',
   styleUrl: './gerente-estoque.component.css',
   providers: [GerenteEstoqueService],
-});
+})
 export class GerenteEstoqueComponent {
   gerentesEstoque: GerenteEstoque[] = [];
 

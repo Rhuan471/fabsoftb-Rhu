@@ -3,7 +3,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { OperadorCaixa } from '../model/operador-caixa';
-// Update the import path and filename to match the actual file, e.g.:
 import { OperadorCaixaService } from '../service/operador-caixa.service';
 
 @Component({

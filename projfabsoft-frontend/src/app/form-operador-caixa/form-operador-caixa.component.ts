@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './form-operador-caixa.component.html',
   styleUrl: './form-operador-caixa.component.css',
   providers: [OperadorCaixaService, Router]
-});
+})
 export class FormOperadorCaixaComponent {
   operadorCaixa: OperadorCaixa = new OperadorCaixa();
 

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { OperadorCaixa } from '../model/OperadorCaixa';
+import { OperadorCaixa } from '../model/operador-caixa';
 // Update the import path and filename to match the actual file, e.g.:
 import { OperadorCaixaService } from '../service/operador-caixa.service';
 
@@ -14,7 +14,7 @@ import { OperadorCaixaService } from '../service/operador-caixa.service';
   providers: [OperadorCaixaService],
 })
 export class OperadorCaixaComponent {
-  operadoresCaixa: OperadorCaixa[] = [];
+  listaOperadoresCaixa: OperadorCaixa[] = [];
 
   constructor(@Inject(OperadorCaixaService) private operadorCaixaService: OperadorCaixaService) {
     this.listarOperadoresCaixa();
@@ -23,7 +23,7 @@ export class OperadorCaixaComponent {
   listarOperadoresCaixa() {
     this.operadorCaixaService.getOperadoresCaixa()
       .subscribe((operadores: OperadorCaixa[]) => {
-        this.operadoresCaixa = operadores;
+        this.listaOperadoresCaixa = operadores;
       });
   }
 }

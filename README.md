@@ -8,6 +8,7 @@ cd projfabsoft-frontend
 
 3) DIGITAR
 
+npm install (caso precise instalar para os pacotes)
 ng serve
 
 

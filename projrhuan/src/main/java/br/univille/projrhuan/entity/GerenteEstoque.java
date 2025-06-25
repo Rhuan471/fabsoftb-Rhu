@@ -20,6 +20,9 @@ public class GerenteEstoque {
     @JoinColumn(name = "administrador_id")
     private Administrador administradorResponsavel;
 
+    public GerenteEstoque() {
+    }
+
     public GerenteEstoque(String nome, String identificacao) {
         this.nome = nome;
         this.identificacao = identificacao;

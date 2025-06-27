@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
-import { Router, Routes } from '@angular/router';
-import { FarmaceuticoService } from '../service/farmaceutico.service';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Farmaceutico } from '../model/farmaceutico';
+import { FarmaceuticoService } from '../service/farmaceutico.service';
 
 @Component({
   selector: 'app-farmaceutico',
@@ -14,7 +13,7 @@ import { Farmaceutico } from '../model/farmaceutico';
   providers: [FarmaceuticoService, Router]
 })
 
-export class ClienteComponent {
+export class FarmaceuticoComponent {
     listaFarmaceuticos: Farmaceutico[] = [];
   FarmaceuticoService: any;
 

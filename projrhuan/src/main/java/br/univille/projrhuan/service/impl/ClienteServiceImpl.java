@@ -1,25 +1,24 @@
 package br.univille.projrhuan.service.impl;
 
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.univille.projrhuan.entity.Cliente;
 import br.univille.projrhuan.repository.ClienteRepository;
 import br.univille.projrhuan.service.ClienteService;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 @Service
-public class ClienteServiceimpl implements ClienteService {
+public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     private ClienteRepository repository;
 
     @Override
     public Cliente save(Cliente cliente) {
-        repository.save(cliente);
-        return cliente;
-
+        return repository.save(cliente);
     }
 
     @Override
@@ -29,20 +28,16 @@ public class ClienteServiceimpl implements ClienteService {
 
     @Override
     public Cliente getById(Long id) {
-        var retorno =repository.findById(id);
-        if(retorno.isPresent())
-            return retorno.get();
-        return null;
-        
+        Optional<Cliente> cliente = repository.findById(id);
+        return cliente.orElse(null);
     }
 
     @Override
     public Cliente delete(Long id) {
-        var cliente = getById(id);
-        if(cliente != null)
-            repository.deleteById(id);
+        Cliente cliente = getById(id);
+        if (cliente != null) {
+            repository.delete(cliente);
+        }
         return cliente;
     }
-
-   
 }

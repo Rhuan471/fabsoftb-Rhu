@@ -29,7 +29,8 @@ export const Approutes: Routes = [
   { path: 'farmaceuticos/novo', component: FormFarmaceuticoComponent}, // Substitua 'FormFarmaceuticoComponent' pelo seu componente de formulário
   { path: 'farmaceuticos/alterar/:id', component: FormFarmaceuticoComponent},
 
-  // Paths para Operador de Caixa
+  { path: '', redirectTo: 'Medicamentos', pathMatch: 'full' },
+
   { path: '', redirectTo: 'Operador de caixa', pathMatch: 'full' },
   { path:'operadores-caixa', component: OperadorCaixaComponent}, // Substitua 'OperadorCaixaComponent' pelo seu componente de listagem
   { path: 'operadores-caixa/novo', component: FormOperadorCaixaComponent}, // Substitua 'FormOperadorCaixaComponent' pelo seu componente de formulário

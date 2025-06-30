@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Medicamentos</title>
+</head>
+<body>
+    <h1>Buscar Medicamento</h1>
+    <form th:action="@{/medicamentos/buscar}" method="get">
+        <div>
+            <label>Nome:</label>
+            <input type="text" name="nome"/>
+            <button type="submit">Buscar por Nome</button>
+        </div>
+    </form>
+    <form th:action="@{/medicamentos/buscar}" method="get">
+        <div>
+            <label>Princípio Ativo:</label>
+            <input type="text" name="principioAtivo"/>
+            <button type="submit">Buscar por Princípio Ativo</button>
+        </div>
+    </form>
+    <form th:action="@{/medicamentos/buscar}" method="get">
+        <div>
+            <label>Código de Barras:</label>
+            <input type="text" name="codigoBarras"/>
+            <button type="submit">Buscar por Código</button>
+        </div>
+    </form>
+    
+    <h2>Resultados:</h2>
+    <table th:if="${resultados != null and !resultados.empty}">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Princípio Ativo</th>
+                <th>Código de Barras</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="med : ${resultados}">
+                <td th:text="${med.nome}"></td>
+                <td th:text="${med.principioAtivo}"></td>
+                <td th:text="${med.codigoBarras}"></td>
+                <td th:text="${med.quantidadeEmEstoque}"></td>
+                <td th:text="${med.preco}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p th:if="${resultados != null and resultados.empty}">Nenhum medicamento encontrado.</p>
+    <a th:href="@{/medicamentos}">Voltar</a>
+</body>
+</html>

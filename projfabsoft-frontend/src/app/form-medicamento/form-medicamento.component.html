@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Medicamento</title>
+</head>
+<body>
+    <h1>Cadastro de Medicamento</h1>
+    <form th:action="@{/medicamentos}" th:object="${medicamento}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}" required/>
+        </div>
+        <div>
+            <label>Princípio Ativo:</label>
+            <input type="text" th:field="*{principioAtivo}" required/>
+        </div>
+        <div>
+            <label>Código de Barras:</label>
+            <input type="text" th:field="*{codigoBarras}" required/>
+        </div>
+        <div>
+            <label>Quantidade em Estoque:</label>
+            <input type="number" th:field="*{quantidadeEmEstoque}" required/>
+        </div>
+        <div>
+            <label>Preço:</label>
+            <input type="number" step="0.01" th:field="*{preco}" required/>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+    <a th:href="@{/medicamentos}">Voltar</a>
+</body>
+</html>

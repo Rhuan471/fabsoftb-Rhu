@@ -10,7 +10,7 @@ import br.univille.projrhuan.repository.MedicamentoRepository;
 import br.univille.projrhuan.service.MedicamentoService;
 
 @Service
-public class MedicamentoServiceImpl implements MedicamentoService {
+public class MedicamentoServiceimpl implements MedicamentoService {
 
     @Autowired
     private MedicamentoRepository repository;

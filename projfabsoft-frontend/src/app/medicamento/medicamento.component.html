@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicamentos</title>
+</head>
+<body>
+    <h1>Lista de Medicamentos</h1>
+    <a th:href="@{/medicamentos/novo}">Novo Medicamento</a>
+    <a th:href="@{/medicamentos/buscar}">Buscar Medicamento</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Princípio Ativo</th>
+                <th>Código de Barras</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="med : ${medicamentos}">
+                <td th:text="${med.nome}"></td>
+                <td th:text="${med.principioAtivo}"></td>
+                <td th:text="${med.codigoBarras}"></td>
+                <td th:text="${med.quantidadeEmEstoque}"></td>
+                <td th:text="${med.preco}"></td>
+                <td>
+                    <a th:href="@{/medicamentos/alterar/{id}(id=${med.id})}">Alterar</a>
+                    <a th:href="@{/medicamentos/delete/{id}(id=${med.id})}">Remover</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import br.univille.projrhuan.entity.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente,Long>{
+public interface ClienteRepository extends JpaRepository<Cliente,Long> {
 
     public interface ClienteRepositorio {
         Optional<Cliente> buscarPorId(Long id);

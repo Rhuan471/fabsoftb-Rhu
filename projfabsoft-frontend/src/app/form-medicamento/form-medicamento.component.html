@@ -1,0 +1,15 @@
+<h2>{{ isEdit ? 'Editar Medicamento' : 'Novo Medicamento' }}</h2>
+<form (ngSubmit)="onSubmit()" #medForm="ngForm">
+  <div>
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="medicamento.nome" name="nome" required>
+  </div>
+
+  <div>
+    <label>Descrição:</label>
+    <input type="text" [(ngModel)]="medicamento.descricao" name="descricao">
+  </div>
+
+  <button type="submit">Salvar</button>
+  <button type="button" (click)="voltar()">Cancelar</button>
+</form>

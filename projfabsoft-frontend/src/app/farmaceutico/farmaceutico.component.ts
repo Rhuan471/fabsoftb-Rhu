@@ -1,42 +1,39 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Farmaceutico } from '../model/farmaceutico';
 import { FarmaceuticoService } from '../service/farmaceutico.service';
 
 @Component({
   selector: 'app-farmaceutico',
-  imports: [HttpClientModule, CommonModule],
-  templateUrl: './cliente.component.html',
-  styleUrl: './cliente.component.css',
-  providers: [FarmaceuticoService, Router]
+  templateUrl: './farmaceutico.component.html',
+  styleUrls: ['./farmaceutico.component.css'],
+  providers: [FarmaceuticoService]
 })
+export class FarmaceuticoComponent implements OnInit {
+  listaFarmaceuticos: Farmaceutico[] = [];
 
-export class FarmaceuticoComponent {
-    listaFarmaceuticos: Farmaceutico[] = [];
-  FarmaceuticoService: any;
+  constructor(
+    private farmaceuticoService: FarmaceuticoService,
+    private router: Router
+  ) {}
 
-    constructor(
-      private clienteService: FarmaceuticoService,
-      private router:Router
-    ) {}
+  ngOnInit(): void {
+    console.log("Carregando farmacêuticos...");
+    this.farmaceuticoService.getFarmaceuticos().subscribe(
+      (farmaceuticos: Farmaceutico[]) => {
+        this.listaFarmaceuticos = farmaceuticos;
+      },
+      (error) => {
+        console.error('Erro ao carregar farmacêuticos', error);
+      }
+    );
+  }
 
-    novo() {
-      this.router.navigate(['clientes/novo']);
-    }
+  novo(): void {
+    this.router.navigate(['farmaceuticos/novo']);
+  }
 
-    ngOnInit(){
-      console.log("Carregando clientes...");
-      this.FarmaceuticoService.getFarmaceuticos().subscribe(
-        (Farmaceuticos: Farmaceutico[]) => {
-          this.listaFarmaceuticos = Farmaceuticos;
-        }
-      );
-    }
-
-    alterar(Farmaceutico:Farmaceutico){
-      this.router.navigate(['clientes/alterar', Farmaceutico.id]);
-    }
-
+  alterar(farmaceutico: Farmaceutico): void {
+    this.router.navigate(['farmaceuticos/alterar', farmaceutico.id]);
+  }
 }

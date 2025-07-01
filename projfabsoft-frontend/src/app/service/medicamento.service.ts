@@ -9,6 +9,9 @@ import { Medicamento } from '../entity/medicamento';
   providedIn: 'root'
 })
 export class MedicamentoService {
+  findById(id: any) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = `${environment.apiBaseUrl}/medicamentos`;
 
   constructor(private http: HttpClient) { }

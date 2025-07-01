@@ -11,7 +11,11 @@ import { AdministradorService } from '../service/administrador.service';
 })
 
 export class AdministradorComponent {
+excluir(_t11: any) {
+throw new Error('Method not implemented.');
+}
   listaClientes: Administrador[] = [];
+listaAdministrador: any;
 
   constructor(
     private administradorService: AdministradorService,

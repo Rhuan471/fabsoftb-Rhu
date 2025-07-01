@@ -1,7 +1,6 @@
-// medicamento-form.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Medicamento } from '../entity/medicamento';
+import { Medicamento } from '../entity/Medicamento';
 import { MedicamentoService } from '../service/medicamento.service';
 
 @Component({
@@ -23,27 +22,27 @@ export class MedicamentoFormComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     if (id) {
       this.isEdit = true;
-      this.medicamentoService.findById(id).subscribe(
-        data => this.medicamento = data,
-        error => console.error('Erro ao carregar medicamento', error)
+      this.medicamentoService.findById(id)?.subscribe(
+        (data: Medicamento) => this.medicamento = data,
+        (error: any) => console.error('Erro ao carregar medicamento', error)
       );
     }
   }
 
   onSubmit(): void {
     if (this.isEdit) {
-      this.medicamentoService.update(this.medicamento.id, this.medicamento).subscribe(
+      this.medicamentoService.update(this.medicamento.id, this.medicamento)?.subscribe(
         () => {
           this.router.navigate(['/medicamentos']);
         },
-        error => console.error('Erro ao atualizar medicamento', error)
+        (error: any) => console.error('Erro ao atualizar medicamento', error)
       );
     } else {
-      this.medicamentoService.create(this.medicamento).subscribe(
+      this.medicamentoService.create(this.medicamento)?.subscribe(
         () => {
           this.router.navigate(['/medicamentos']);
         },
-        error => console.error('Erro ao criar medicamento', error)
+        (error: any) => console.error('Erro ao criar medicamento', error)
       );
     }
   }

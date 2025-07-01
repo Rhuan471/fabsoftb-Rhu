@@ -1,21 +1,27 @@
 <main class="container">
-    <h2>Farmaceutico</h2>
-
-    <a routerLink="/Farmaceutico/novo">Novo</a>
-
+    <h2>Farmacêuticos</h2>
+  
+    <a routerLink="/farmaceuticos/novo" class="btn btn-primary">Novo</a>
+  
     <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>cpf</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let umFarmaceutico of listaFarmaceuticos">
-                <td>{{umFarmaceutico.nome}}</td>
-                <td>{{umFarmaceutico.cpf}}</td>
-            </tr>
-        </tbody>
-
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Especialidade</th>
+          <th>Telefone</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of listaFarmaceuticos">
+          <td>{{ f.nome }}</td>
+          <td>{{ f.especialidade }}</td>
+          <td>{{ f.telefone }}</td>
+          <td>
+            <button (click)="alterar(f)" class="btn btn-secondary">Alterar</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
-</main>
+  </main>
+  

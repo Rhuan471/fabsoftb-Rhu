@@ -1,19 +1,13 @@
-import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { GerenteEstoque } from '../model/gerente-estoque';
 import { GerenteEstoqueService } from '../service/gerente-estoque.service';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-form-gerente-estoque',
-  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-gerente-estoque.component.html',
-  styleUrl: './form-gerente-estoque.component.css',
-  providers: [GerenteEstoqueService, Router]
+  styleUrls: ['./form-gerente-estoque.component.css'],
+  providers: [GerenteEstoqueService]  
 })
 export class FormGerenteEstoqueComponent {
   gerenteEstoque: GerenteEstoque = {} as GerenteEstoque;
@@ -25,8 +19,13 @@ export class FormGerenteEstoqueComponent {
 
   salvar() {
     this.gerenteEstoqueService.saveGerenteEstoque(this.gerenteEstoque)
-      .subscribe((resultado: any) => {
-        this.router.navigate(['gerentes-estoque']);
+      .subscribe({
+        next: (resultado: any) => {
+          this.router.navigate(['gerentes-estoque']);
+        },
+        error: (err) => {
+          console.error('Erro ao salvar gerente de estoque', err);
+        }
       });
   }
 }

@@ -6,7 +6,19 @@ import { MedicamentoService } from '../service/medicamento.service';
 
 @Component({
   selector: 'app-medicamento-list',
-  templateUrl: './medicamento-list.component.html',
+  template: `<div>
+    <!-- Medicamento List Template -->
+    <h2>Lista de Medicamentos</h2>
+    <button (click)="novoMedicamento()">Novo Medicamento</button>
+    <button (click)="buscarMedicamento()">Buscar Medicamento</button>
+    <ul>
+      <li *ngFor="let medicamento of medicamentos">
+        {{ medicamento.nome }}
+        <button (click)="editarMedicamento(medicamento.id)">Editar</button>
+        <button (click)="deletarMedicamento(medicamento.id)">Deletar</button>
+      </li>
+    </ul>
+  </div>`,
   styleUrls: ['./medicamento-list.component.css']
 })
 export class MedicamentoListComponent implements OnInit {

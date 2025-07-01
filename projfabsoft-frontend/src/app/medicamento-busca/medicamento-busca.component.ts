@@ -6,8 +6,8 @@ import { MedicamentoService } from '../service/medicamento.service';
 
 @Component({
   selector: 'app-medicamento-search',
-  templateUrl: './medicamento-search.component.html',
-  styleUrls: ['./medicamento-search.component.css']
+  templateUrl: './medicamento-busca.component.html',
+  styleUrls: ['./medicamento-busca.component.css']
 })
 export class MedicamentoSearchComponent implements OnInit {
   resultados: Medicamento[] = [];

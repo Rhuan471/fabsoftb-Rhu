@@ -1,4 +1,3 @@
-// medicamento.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -16,7 +15,9 @@ export class MedicamentoService {
 
   constructor(private http: HttpClient) { }
 
-  // Operações CRUD básicas
+  buscarPorNome(nome: string): Observable<Medicamento[]> {
+    return this.http.get<Medicamento[]>(`${this.apiUrl}?nome=${nome}`);
+  }
   getAll(): Observable<Medicamento[]> {
     return this.http.get<Medicamento[]>(this.apiUrl);
   }

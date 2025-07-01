@@ -3,6 +3,5 @@ export class Cliente {
     nome: string;
     endereco: string;
     telefone: string;
-    email: string;
     dataNascimento: Date;
 }
